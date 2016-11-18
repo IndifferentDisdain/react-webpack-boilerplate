@@ -67,7 +67,7 @@
     "webpack-dev-server": "1.14.1"
   },
   "jest": {
-    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "transform": {".*": "<rootDir>/node_modules/babel-jest"},
     "unmockedModulePathPatterns": [
       "<rootDir>/node_modules/react",
       "<rootDir>/node_modules/react-dom",
@@ -77,10 +77,7 @@
     "modulePathIgnorePatterns": [
       "<rootDir>/node_modules/"
     ],
-    "testFileExtensions": [
-      "test.js",
-      "test.jsx"
-    ],
-    "testDirectoryName": "client"
+    "collectCoverage": true,
+    "coverageFormats": ["json", "html"]
   }
 }
